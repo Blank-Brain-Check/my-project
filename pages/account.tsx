@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Membership from '../components/Membership'
 import useAuth from '../hooks/useAuth'
-import Image from 'next/image'
 import payments, { goToBillingPortal } from '../lib/stripe'
 import useSubscription from '../hooks/useSubscriptions'
+import { PowerIcon, HomeIcon } from '@heroicons/react/24/solid'
 
 interface Props {
   products: Product[]
@@ -30,28 +30,19 @@ function Account({ products }: Props) {
       </Head>
       <header className={`bg-[#141414]`}>
         <Link href="/">
-          <Image
-            src="https://rb.gy/ulxxee"
-            width={120}
-            height={120}
-            className="cursor-pointer object-contain"
-            alt="App logo"
+          <HomeIcon className= "cursor-pointer rounded,h-7 w-7"
           />
         </Link>
         <Link href="/account">
-          <Image
-            src="https://rb.gy/g1pwyx"
-            alt="account logo"
-            className="cursor-pointer rounded"
-
-          />
+        <PowerIcon className= "cursor-pointer rounded,h-6 w-6"
+             />
         </Link>
       </header>
       <main className="mx-auto max-w-6xl px-5 pt-24 pb-12 transition-all md:px-10">
         <div className="flex flex-col gap-x-4 md:flex-row md:items-center">
           <h1 className="text-3xl md:text-4xl">Account</h1>
           <div className="-ml-0.5 flex items-center gap-x-1.5">
-            <Image src="https://rb.gy/4vfk4r" alt="Stupit thing" className="h-7 w-7" />
+            <img src="https://rb.gy/4vfk4r" alt="Stupit thing" className="h-7 w-7" />
             <p className="text-xs font-semibold text-[#555]">
               Member since {subscription?.created}
             </p>
@@ -72,6 +63,7 @@ function Account({ products }: Props) {
           </div>
           <p
             className="cursor-pointer text-blue-500 hover:underline md:text-right">
+            
             Change plan
           </p>
         </div>

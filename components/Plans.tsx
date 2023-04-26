@@ -7,7 +7,7 @@ import useAuth from '../hooks/useAuth'
 import { loadCheckout } from '../lib/stripe'
 import Table from './Table'
 import Loader from './Loader'
-import Image from 'next/image'
+import { HomeIcon } from '@heroicons/react/24/solid'
 
 interface Props {
   products: Product[]
@@ -35,13 +35,7 @@ function Plans({ products }: Props) {
       </Head>
       <header className="border-b border-white/10 bg-[#141414]">
         <Link href="/">
-          <Image
-            src="https://rb.gy/ulxxee"
-            alt="Movie Catalogue app"
-            width={150}
-            height={90}
-            className="cursor-pointer object-contain"
-          />
+        <HomeIcon className= "cursor-pointer rounded,h-7 w-7"/>
         </Link>
         <button
           className="text-lg font-medium hover:underline"
@@ -57,11 +51,11 @@ function Plans({ products }: Props) {
         </h1>
         <ul>
           <li className="flex items-center gap-x-2 text-lg">
-            <CheckIcon className="h-7 w-7 text-[#E50914]" /> Watch all you want.
+             Watch all you want.
             Ad-free.
           </li>
           <li className="flex items-center gap-x-2 text-lg">
-            <CheckIcon className="h-7 w-7 text-[#E50914]" /> Change or cancel
+             Change or cancel
             your plan anytime.
           </li>
         </ul>
@@ -85,7 +79,7 @@ function Plans({ products }: Props) {
 
           <button
             disabled={!selectedPlan || isBillingLoading}
-            className={`mx-auto w-11/12 rounded bg-[#E50914] py-4 text-xl shadow hover:bg-[#f6121d] md:w-[420px] ${
+            className={`mx-auto w-11/12 rounded bg-[#0B1B28] py-4 text-xl shadow hover:bg-[#f6121d] md:w-[420px] ${
               isBillingLoading && 'opacity-60'
             }`}
             onClick={subscribeToPlan}

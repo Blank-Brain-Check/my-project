@@ -1,9 +1,9 @@
-import { BellIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid'
+import { BellIcon, MagnifyingGlassIcon, PowerIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import useAuth from '../hooks/useAuth'
 import BasicMenu from './BasicMenu'
-import Image from 'next/image'
+
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -28,13 +28,7 @@ function Header() {
   return ( 
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
     <div className="flex items-center space-x-2 md:space-x-10">
-      <Image
-          src="https://rb.gy/ulxxee"
-          width={100}
-          height={100}
-          className="cursor-pointer object-contain" 
-          alt="App Logo"
-      />
+      
        <BasicMenu />
 
       <ul className="hidden space-x-4 md:flex">
@@ -54,12 +48,8 @@ function Header() {
         
         <BellIcon className="h-6 w-6" /> 
         <Link href="/account">
-        <Image
-            onClick={logout}
-            src="https://rb.gy/g1pwyx"
-            alt="Account Logo"
-            className="cursor-pointer rounded"
-          />
+        <PowerIcon className= "cursor-pointer rounded,h-6 w-6"
+             />
         </Link>     
       </div>
     </header>
