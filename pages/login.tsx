@@ -36,12 +36,13 @@ function Login() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image
-        src="/assets/login.jpg"
+        src="https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg"
         fill={true}
         className="-z-10 !hidden opacity-60 sm:!inline"
         style={{ objectFit: 'cover' }}
         alt="Bg login page"
       />
+      /* For app logo */
       <img
         src="https://rb.gy/ulxxee"
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
