@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Membership from '../components/Membership'
 import useAuth from '../hooks/useAuth'
-
+import Image from 'next/image'
 import payments, { goToBillingPortal } from '../lib/stripe'
 import useSubscription from '../hooks/useSubscriptions'
 
@@ -30,18 +30,20 @@ function Account({ products }: Props) {
       </Head>
       <header className={`bg-[#141414]`}>
         <Link href="/">
-          <img
+          <Image
             src="https://rb.gy/ulxxee"
             width={120}
             height={120}
             className="cursor-pointer object-contain"
+            alt="App logo"
           />
         </Link>
         <Link href="/account">
-          <img
+          <Image
             src="https://rb.gy/g1pwyx"
-            alt=""
+            alt="account logo"
             className="cursor-pointer rounded"
+
           />
         </Link>
       </header>

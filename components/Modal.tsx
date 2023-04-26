@@ -23,7 +23,7 @@ import {
 import { db } from '../firebase'
 import useAuth from '../hooks/useAuth'
 import toast, { Toaster } from 'react-hot-toast'
-import { modalState, movieState } from '../atoms/modalAtom'
+import { modalState, movieState } from '../atoms/modalAtom.'
 
 function Modal() {
   const [movie, setMovie] = useRecoilState(movieState)

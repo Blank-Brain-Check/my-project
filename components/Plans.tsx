@@ -7,6 +7,7 @@ import useAuth from '../hooks/useAuth'
 import { loadCheckout } from '../lib/stripe'
 import Table from './Table'
 import Loader from './Loader'
+import Image from 'next/image'
 
 interface Props {
   products: Product[]
@@ -34,7 +35,7 @@ function Plans({ products }: Props) {
       </Head>
       <header className="border-b border-white/10 bg-[#141414]">
         <Link href="/">
-          <img
+          <Image
             src="https://rb.gy/ulxxee"
             alt="Movie Catalogue app"
             width={150}
@@ -58,10 +59,6 @@ function Plans({ products }: Props) {
           <li className="flex items-center gap-x-2 text-lg">
             <CheckIcon className="h-7 w-7 text-[#E50914]" /> Watch all you want.
             Ad-free.
-          </li>
-          <li className="flex items-center gap-x-2 text-lg">
-            <CheckIcon className="h-7 w-7 text-[#E50914]" /> Recommendations
-            just for you.
           </li>
           <li className="flex items-center gap-x-2 text-lg">
             <CheckIcon className="h-7 w-7 text-[#E50914]" /> Change or cancel

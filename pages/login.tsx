@@ -43,7 +43,7 @@ function Login() {
         alt="Bg login page "
       />
       
-      <img
+      <Image
         src="https://rb.gy/ulxxee"
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
         width={150}
