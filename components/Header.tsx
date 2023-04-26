@@ -51,13 +51,13 @@ function Header() {
 
       <div className="flex items-center space-x-4 text-sm font-light">
       <MagnifyingGlassIcon className="hidden h-6 w-6 sm:inline" />
-        <p className='hidden lg:inline'>Kids</p>
+        
         <BellIcon className="h-6 w-6" /> 
         <Link href="/account">
-        <img
+        <Image
             onClick={logout}
             src="https://rb.gy/g1pwyx"
-            alt=""
+            alt="Account Logo"
             className="cursor-pointer rounded"
           />
         </Link>     
